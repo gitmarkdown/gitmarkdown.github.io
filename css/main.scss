@@ -1,0 +1,77 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+body {
+  background-color: #24292E;
+  color: #C8C9CB;
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+div {
+  vertical-align: top;
+}
+
+img {
+  display: block;
+}
+
+.box-shadow {
+  box-shadow: 0 0 5px #C8C9CB;
+}
+
+$size-list: 1 2 5 10 200 400;
+
+@each $i in $size-list {
+  .border-#{$i} {
+    border-style: solid;
+    border-width: #{$i}px;
+  }
+}
+
+@each $i in $size-list {
+  .margin-#{$i} {
+    margin: #{$i}px;
+  }
+}
+
+@each $i in $size-list {
+  .width-#{$i} {
+    width: #{$i}px;
+  }
+}
+
+.border-clean-gray {
+  border-color: gray;
+}
+
+.border-clean-white {
+  border-color: #C8C9CB;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.font-small {
+  font-size: 50%;
+}
+
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
