@@ -4,8 +4,6 @@
 @charset "utf-8";
 
 body {
-  background-color: #24292E;
-  color: #C8C9CB;
   font-family: 'Roboto', sans-serif;
   line-height: 30px;
 }
@@ -14,15 +12,27 @@ div {
   vertical-align: top;
 }
 
+blockquote {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
+}
+
+.container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box-shadow {
   box-shadow: 0 0 5px #C8C9CB;
 }
 
-$size-list: 1 2 5 10 200 400;
+$size-list: 1 2 5 10 20 200 500;
 
 @each $i in $size-list {
   .border-#{$i} {
@@ -43,6 +53,12 @@ $size-list: 1 2 5 10 200 400;
   }
 }
 
+@each $i in $size-list {
+  .padding-top-#{$i} {
+    padding-top: #{$i}px;
+  }
+}
+
 .border-clean-gray {
   border-color: gray;
 }
@@ -51,13 +67,6 @@ $size-list: 1 2 5 10 200 400;
   border-color: #C8C9CB;
 }
 
-@media screen and (min-width: 800px) {
-  .container {
-    width: 810px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .inline-block {
   display: inline-block;
